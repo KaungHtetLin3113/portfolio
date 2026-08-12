@@ -82,7 +82,7 @@ function App() {
           </button>
           <ul className={`nav-menu ${isMobileMenuOpen ? "active" : ""}`}>
             <li><a href="#home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
-            <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</a></li>
+            <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</a></li>
             <li><a href="#skills" onClick={() => setIsMobileMenuOpen(false)}>Skills</a></li>
             <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
           </ul>
