@@ -69,7 +69,7 @@ export default function Projects() {
                     {String(project.id).padStart(2, "0")}
                   </span>
                   <span className="project-cover-glow" />
-                  <span className="project-cover-mark">{project.featured ? "⭐" : "🚀"}</span>
+                  <span className="project-cover-mark">{project.featured ? "⭐" : ""}</span>
                   {project.featured && (
                     <span className="featured-badge">⭐ Featured</span>
                   )}
@@ -114,7 +114,7 @@ export default function Projects() {
                       </a>
                     )}
 
-                  {project.demo && (
+                    {project.demo && (
                       <a
                         href={project.demo}
                         target="_blank"
