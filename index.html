@@ -4,7 +4,38 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaung Htet Lin</title>
+    <meta name="description" content="Portfolio of Kaung Htet Lin — Full Stack Developer specializing in PHP, Laravel, and modern web development." />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#667eea" id="theme-color-meta" />
+    <meta property="og:title" content="Kaung Htet Lin — Full Stack Developer" />
+    <meta property="og:description" content="Portfolio showcasing projects, skills, education and contact." />
+    <meta property="og:type" content="website" />
+    <title>Kaung Htet Lin — Full Stack Developer</title>
+    <style>
+      /* Dark-mode FOUC guard: paint the background before React hydrates. */
+      :root { color-scheme: light; }
+      html.dark-mode, html.dark-mode body {
+        color-scheme: dark;
+      }
+      html.dark-mode body {
+        background: #1a1a2e;
+        color: #e0e0e0;
+      }
+    </style>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('portfolio-dark-mode');
+          var isDark = stored !== null
+            ? JSON.parse(stored)
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (isDark) {
+            document.documentElement.classList.add('dark-mode');
+            document.body.classList.add('dark-mode');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
